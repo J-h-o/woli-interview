@@ -60,7 +60,6 @@ async function convert(db, fromCur, toCur, value) {
   if (!doc.exists) {
     console.log("No such document!");
   } else {
-    console.log("Document data:", doc.data());
     const res = doc.data()[toCur] * value;
     console.log("Converted is: ", res);
     return res;
